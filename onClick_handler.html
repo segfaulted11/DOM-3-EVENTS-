@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- optn-1 for onclick event handler -->
+    <button onclick="console.log('this text will be consoled when the button is clicked')">click here</button>
+    
+    
+<!-- optn-2 for onclick event handler (internally creating the function) -->
+    <button onclick="makeYellow()">click here 3</button>
+    <button onclick="makeRed()">click here 2</button>
+    <script>
+        function makeRed(){
+            document.body.style.backgroundColor = "red"
+        }
+        function makeYellow(){
+            document.body.style.backgroundColor = "yellow"
+        }
+        </script>
+
+
+<!-- optn-2 for onclick event handler (externally creating the function and calling it from the html element) -->
+<button onclick="makeMaroon()">Click here 4</button>
+
+
+<!-- optn-3 for onclick event handler (js) -->
+
+<button id="btn-id">Click Here 5</button>
+<!-- another way -->
+<button id="btn-id2">Click Here 6</button>
+
+
+
+<!-- optn-4 (addEventListener) -->
+
+<button id="btn1">EventListner Button</button>
+<script>
+    // select the element-
+    let select = document.getElementById('btn1')
+    //adding eventListener to the element-
+    select.addEventListener('click',function makeTomato(){
+        document.body.style.backgroundColor = "tomato"
+    })
+</script>
+
+
+
+    <script src="js.js"></script>
+    
+</body>
+</html>
