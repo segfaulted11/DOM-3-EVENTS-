@@ -47,8 +47,18 @@
     })
 </script>
 
+    <!--another way  -->
+    <h1 id="h1-id">This will be changed once its clicked.</h1>
+<button id="btn-id">Click Here</button>
 
-
+<script>
+    let selectingBtn = document.getElementById("btn-id")
+selectingBtn.addEventListener("click",changeH1)//pass the function name only w/o adding parenthesis further (dont call it here)
+    
+function changeH1(){
+    document.body.style.backgroundColor = "pink"
+}
+</script>
     <script src="js.js"></script>
     
 </body>
