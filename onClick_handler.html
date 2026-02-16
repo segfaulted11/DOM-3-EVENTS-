@@ -59,6 +59,26 @@ function changeH1(){
     document.body.style.backgroundColor = "pink"
 }
 </script>
+
+
+    
+    <!-- playing w event handling -->
+<h1 id="h1-id">This will be changed once its clicked.</h1>
+<button id="btn-id">Click Here</button>
+    
+<script>
+let selectingBtn = document.getElementById("btn-id")
+selectingBtn.addEventListener("click",changeH1)
+
+function changeH1(){
+    let selectingH1 = document.getElementById("h1-id")
+    selectingH1.style.fontSize= "40px"
+    selectingH1.style.color = "gray"
+    selectingH1.textContent = "Its changed!"
+}
+</script>
+
+    
     <script src="js.js"></script>
     
 </body>
